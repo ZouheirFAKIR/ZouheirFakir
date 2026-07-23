@@ -1847,3 +1847,28 @@ a.contact-line:hover {
   .icon-tiles.tools .icon-tile { width: calc(50% - 0.5rem); }
   .hero-name { font-size: 2.4rem; }
 }
+
+/* ================= FIX SIDE-SCROLL CULPRITS ================= */
+html, body { max-width: 100%; overflow-x: hidden; }
+
+/* navbar: 100% width + horizontal padding was overflowing */
+#navbar {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* mobile menu overlay: pin to all edges, no width overflow */
+#mobile-menu {
+  left: 0;
+  right: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* lightbox overlay: same fix */
+#lightbox {
+  left: 0;
+  right: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
