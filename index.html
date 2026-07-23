@@ -184,13 +184,18 @@
 
     <div class="projects">
 
-      <!-- 1. Biougnach (image) -->
+      <!-- 1. Biougnach (carousel) -->
       <article class="project fade-up">
         <div class="proj-visual">
-          <div class="proj-frame">
-            <img src="assets/images/BiougnachWebsite.png" alt="Biougnach Marketplace"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-            <div class="proj-ph" style="display:none">BG</div>
+          <div class="proj-frame carousel" data-autoplay="4000">
+            <div class="car-track">
+              <img src="assets/images/BiougnachWebsite.png" alt="Biougnach Marketplace">
+              <img src="assets/images/BiougnachLogo.png" alt="Biougnach Logo">
+              <img src="assets/images/View.png" alt="Biougnach Store Concept">
+            </div>
+            <button class="car-btn prev" aria-label="Previous">‹</button>
+            <button class="car-btn next" aria-label="Next">›</button>
+            <div class="car-dots"></div>
           </div>
         </div>
         <div class="proj-info">
@@ -198,11 +203,10 @@
           <h3 class="proj-title">Biougnach</h3>
           <p class="proj-sub" data-key="b_sub">Modern E-Commerce Marketplace</p>
           <p class="proj-desc" data-key="b_desc">A complete relooking of the Biougnach brand — I redesigned the full
-            visual identity and
-            built the entire marketplace from scratch. It features an AI shopping assistant (Biou) that answers over
-            live inventory in six languages, separate dashboards for clients, vendors and admins, social login through
-            Google, Facebook and Apple, and a full checkout with Stripe, PayPal and cash-on-delivery — plus flash sales,
-            wishlists and multi-currency support.</p>
+            visual identity and built the entire marketplace from scratch. It features an AI shopping assistant (Biou)
+            that answers over live inventory, a fully translated interface in six languages, separate dashboards for
+            clients, vendors and admins, Google authentication, and a checkout with Stripe (test mode) and
+            cash-on-delivery — plus flash sales, wishlists and multi-currency support.</p>
           <ul class="proj-tags">
             <li>React</li>
             <li>Vite</li>
@@ -212,7 +216,6 @@
             <li>Express</li>
             <li>PostgreSQL</li>
             <li>Stripe</li>
-            <li>PayPal</li>
             <li>Groq AI</li>
             <li>Cloudinary</li>
             <li>Firebase</li>
@@ -271,7 +274,8 @@
           <p class="proj-desc" data-key="c_desc">A healthcare booking platform with role-based workflows for patients
             and admins. Full
             doctor management with photos, bios and star ratings, an interactive scheduling engine with real-time status
-            tracking, and a production Docker deployment with a managed database and automated HTTPS.</p>
+            tracking, and a production deployment on Render using Docker, with a managed Aiven database, custom Nginx
+            configuration and automated HTTPS.</p>
           <ul class="proj-tags">
             <li>Laravel 12</li>
             <li>PHP</li>

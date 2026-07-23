@@ -798,7 +798,9 @@ body.locked {
   opacity: 0;
   pointer-events: none;
 }
-
+.proj-frame.carousel {
+  overflow: hidden;
+}
 /* ---- CAROUSEL ---- */
 .car-track {
   width: 100%;
@@ -1871,4 +1873,7 @@ html, body { max-width: 100%; overflow-x: hidden; }
   right: 0;
   width: 100%;
   box-sizing: border-box;
+}
+.proj-frame.carousel {
+  padding: 0;
 }
