@@ -532,3 +532,24 @@ document.querySelectorAll('.water').forEach(el => {
   });
 });
 
+// ============ HAMBURGER / MOBILE MENU ============
+(function () {
+  const burger = document.getElementById('hamburger');
+  const menu = document.getElementById('mobile-menu');
+  if (!burger || !menu) return;
+
+  function toggle() {
+    burger.classList.toggle('open');
+    menu.classList.toggle('open');
+    document.body.classList.toggle('locked');
+  }
+  function close() {
+    burger.classList.remove('open');
+    menu.classList.remove('open');
+    document.body.classList.remove('locked');
+  }
+
+  burger.addEventListener('click', toggle);
+  // close when a menu link is tapped
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+})();

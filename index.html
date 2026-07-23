@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zouheir FAKIR — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" type="image/png" href="assets/images/LogoIcon.png">
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap"
     rel="stylesheet">
@@ -35,9 +36,11 @@
 
   <canvas id="bg-canvas"></canvas>
 
+
   <!-- ============ NAVBAR ============ -->
   <nav id="navbar">
     <a class="logo" href="#hero">Z<span>F</span></a>
+
     <ul class="nav-links">
       <li><a href="#hero" data-key="nav_home">Home</a></li>
       <li><a href="#about" data-key="nav_about">About</a></li>
@@ -46,12 +49,30 @@
       <li><a href="#skills" data-key="nav_skills">Skills</a></li>
       <li><a href="#contact" data-key="nav_contact">Contact</a></li>
     </ul>
-    <button id="langToggle" aria-label="Switch language">
-      <span class="lang-opt active" data-lang="en">EN</span>
-      <span class="lang-sep">/</span>
-      <span class="lang-opt" data-lang="fr">FR</span>
-    </button>
+
+    <div class="nav-right">
+      <button id="langToggle" aria-label="Switch language">
+        <span class="lang-opt active" data-lang="en">EN</span>
+        <span class="lang-sep">/</span>
+        <span class="lang-opt" data-lang="fr">FR</span>
+      </button>
+      <button id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
+
+  <!-- ============ MOBILE MENU ============ -->
+  <div id="mobile-menu">
+    <ul>
+      <li><a href="#hero" data-key="nav_home">Home</a></li>
+      <li><a href="#about" data-key="nav_about">About</a></li>
+      <li><a href="#experience" data-key="nav_exp">Experience</a></li>
+      <li><a href="#projects" data-key="nav_proj">Projects</a></li>
+      <li><a href="#skills" data-key="nav_skills">Skills</a></li>
+      <li><a href="#contact" data-key="nav_contact">Contact</a></li>
+    </ul>
+  </div>
 
   <!-- ============ HERO ============ -->
   <section id="hero">
@@ -61,7 +82,8 @@
         <span class="reveal-line"><span>Zouheir</span></span>
         <span class="reveal-line gold"><span>FAKIR</span></span>
       </h1>
-      <p class="hero-desc reveal-line"><span data-key="hero_desc">I build modern web applications with React, Node.js and Laravel — mixing
+      <p class="hero-desc reveal-line"><span data-key="hero_desc">I build modern web applications with React, Node.js
+          and Laravel — mixing
           code with graphic design to create experiences that stand out. Based in Casablanca, Morocco.</span></p>
       <div class="hero-btns">
         <a href="#projects" class="btn-gold water" data-key="hero_btn1">View my work</a>
@@ -96,17 +118,24 @@
     </div>
     <div class="about-wrap">
       <div class="about-text fade-up">
-        <p class="about-intro" data-key="about_intro">Bac+2 student in Software Development at InfoDesign, Casablanca — passionate about Full
+        <p class="about-intro" data-key="about_intro">Bac+2 student in Software Development at InfoDesign, Casablanca —
+          passionate about Full
           Stack development and modern web applications.</p>
-        <p class="about-body" data-key="about_body">I'm looking for an internship to put my skills into practice while making use of my
+        <p class="about-body" data-key="about_body">I'm looking for an internship to put my skills into practice while
+          making use of my
           graphic design knowledge — from web and desktop apps to motion design with After Effects.</p>
       </div>
       <div class="about-info fade-up">
-        <div class="info-item"><span class="ilabel" data-key="about_city">City</span><span class="ival">Casablanca, MA</span></div>
-        <div class="info-item"><span class="ilabel" data-key="about_email">Email</span><span class="ival">fakirzouheir@gmail.com</span></div>
-        <div class="info-item"><span class="ilabel" data-key="about_phone">Phone</span><span class="ival">+212 663 822 049</span></div>
-        <div class="info-item"><span class="ilabel" data-key="about_school">School</span><span class="ival">InfoDesign — Bac+2 Dev</span></div>
-        <div class="info-item"><span class="ilabel" data-key="about_langs">Languages</span><span class="ival" data-key="about_langs_val">Arabic · French · English</span>
+        <div class="info-item"><span class="ilabel" data-key="about_city">City</span><span class="ival">Casablanca,
+            MA</span></div>
+        <div class="info-item"><span class="ilabel" data-key="about_email">Email</span><span
+            class="ival">fakirzouheir@gmail.com</span></div>
+        <div class="info-item"><span class="ilabel" data-key="about_phone">Phone</span><span class="ival">+212 663 822
+            049</span></div>
+        <div class="info-item"><span class="ilabel" data-key="about_school">School</span><span class="ival">InfoDesign —
+            Bac+2 Dev</span></div>
+        <div class="info-item"><span class="ilabel" data-key="about_langs">Languages</span><span class="ival"
+            data-key="about_langs_val">Arabic · French · English</span>
         </div>
         <div class="info-item"><span class="ilabel">GitHub</span><span class="ival">ZouheirFakir</span></div>
       </div>
@@ -130,7 +159,8 @@
         <div class="exp-body">
           <h3 class="exp-role" data-key="exp_role">Web Developer Intern</h3>
           <span class="exp-company">WEBEX AG</span>
-          <p class="exp-desc" data-key="exp_desc">Internship in web development. Worked on building and improving web interfaces,
+          <p class="exp-desc" data-key="exp_desc">Internship in web development. Worked on building and improving web
+            interfaces,
             collaborating with the development team on real projects.</p>
           <ul class="exp-tags">
             <li>HTML</li>
@@ -167,17 +197,34 @@
           <span class="proj-cat" data-key="b_cat">Full-Stack · Brand Identity</span>
           <h3 class="proj-title">Biougnach</h3>
           <p class="proj-sub" data-key="b_sub">Modern E-Commerce Marketplace</p>
-          <p class="proj-desc" data-key="b_desc">A complete relooking of the Biougnach brand — I redesigned the full visual identity and
+          <p class="proj-desc" data-key="b_desc">A complete relooking of the Biougnach brand — I redesigned the full
+            visual identity and
             built the entire marketplace from scratch. It features an AI shopping assistant (Biou) that answers over
             live inventory in six languages, separate dashboards for clients, vendors and admins, social login through
             Google, Facebook and Apple, and a full checkout with Stripe, PayPal and cash-on-delivery — plus flash sales,
             wishlists and multi-currency support.</p>
           <ul class="proj-tags">
-            <li>React</li><li>Vite</li><li>Tailwind</li><li>Framer Motion</li><li>Node.js</li><li>Express</li><li>PostgreSQL</li><li>Stripe</li><li>PayPal</li><li>Groq AI</li><li>Cloudinary</li><li>Firebase</li><li>i18next</li><li>Vercel</li><li>Aiven</li>
+            <li>React</li>
+            <li>Vite</li>
+            <li>Tailwind</li>
+            <li>Framer Motion</li>
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>PostgreSQL</li>
+            <li>Stripe</li>
+            <li>PayPal</li>
+            <li>Groq AI</li>
+            <li>Cloudinary</li>
+            <li>Firebase</li>
+            <li>i18next</li>
+            <li>Vercel</li>
+            <li>Aiven</li>
           </ul>
           <div class="proj-links">
-            <a href="https://biougnach.vercel.app/" target="_blank" rel="noopener" class="proj-link" data-key="link_live">Live Site →</a>
-            <a href="https://github.com/ZouheirFAKIR/biougnach" target="_blank" rel="noopener" class="proj-link" data-key="link_github">GitHub →</a>
+            <a href="https://biougnach.vercel.app/" target="_blank" rel="noopener" class="proj-link"
+              data-key="link_live">Live Site →</a>
+            <a href="https://github.com/ZouheirFAKIR/biougnach" target="_blank" rel="noopener" class="proj-link"
+              data-key="link_github">GitHub →</a>
           </div>
         </div>
       </article>
@@ -195,11 +242,15 @@
           <span class="proj-cat" data-key="bv_cat">Motion Design · Video</span>
           <h3 class="proj-title">Biougnach Promo</h3>
           <p class="proj-sub" data-key="bv_sub">Promotional Motion Design</p>
-          <p class="proj-desc" data-key="bv_desc">A 15-scene animated commercial showcasing flagship products — smartwatches, audio gear,
+          <p class="proj-desc" data-key="bv_desc">A 15-scene animated commercial showcasing flagship products —
+            smartwatches, audio gear,
             consoles and appliances — with smooth transitions, spatial typography, sound design and branded intro and
             outro sequences.</p>
           <ul class="proj-tags">
-            <li>After Effects</li><li>Illustrator</li><li>Photoshop</li><li>Audition</li>
+            <li>After Effects</li>
+            <li>Illustrator</li>
+            <li>Photoshop</li>
+            <li>Audition</li>
           </ul>
         </div>
       </article>
@@ -217,15 +268,23 @@
           <span class="proj-cat" data-key="c_cat">Full-Stack Web App</span>
           <h3 class="proj-title">CareNow</h3>
           <p class="proj-sub" data-key="c_sub">Medical Appointment &amp; Healthcare Platform</p>
-          <p class="proj-desc" data-key="c_desc">A healthcare booking platform with role-based workflows for patients and admins. Full
+          <p class="proj-desc" data-key="c_desc">A healthcare booking platform with role-based workflows for patients
+            and admins. Full
             doctor management with photos, bios and star ratings, an interactive scheduling engine with real-time status
             tracking, and a production Docker deployment with a managed database and automated HTTPS.</p>
           <ul class="proj-tags">
-            <li>Laravel 12</li><li>PHP</li><li>Tailwind</li><li>Alpine.js</li><li>MySQL</li><li>Docker</li>
+            <li>Laravel 12</li>
+            <li>PHP</li>
+            <li>Tailwind</li>
+            <li>Alpine.js</li>
+            <li>MySQL</li>
+            <li>Docker</li>
           </ul>
           <div class="proj-links">
-            <a href="https://carenow-z17c.onrender.com" target="_blank" rel="noopener" class="proj-link" data-key="link_demo">Live Demo →</a>
-            <a href="https://github.com/ZouheirFAKIR/carenow" target="_blank" rel="noopener" class="proj-link" data-key="link_github2">GitHub →</a>
+            <a href="https://carenow-z17c.onrender.com" target="_blank" rel="noopener" class="proj-link"
+              data-key="link_demo">Live Demo →</a>
+            <a href="https://github.com/ZouheirFAKIR/carenow" target="_blank" rel="noopener" class="proj-link"
+              data-key="link_github2">GitHub →</a>
           </div>
         </div>
       </article>
@@ -253,11 +312,16 @@
           <span class="proj-cat" data-key="d_cat">Desktop Software · POS</span>
           <h3 class="proj-title">Delizia</h3>
           <p class="proj-sub" data-key="d_sub">Restaurant Management &amp; POS System</p>
-          <p class="proj-desc" data-key="d_desc">A desktop POS built on an MVC architecture with a live floor plan showing table status,
+          <p class="proj-desc" data-key="d_desc">A desktop POS built on an MVC architecture with a live floor plan
+            showing table status,
             fast order taking with automatic stock deduction, and an invoice generator handling tax, multiple payment
             types and printable receipts. Includes sales analytics, low-stock alerts and email password recovery.</p>
           <ul class="proj-tags">
-            <li>Java</li><li>JavaFX</li><li>JDBC</li><li>MySQL</li><li>JasperReports</li>
+            <li>Java</li>
+            <li>JavaFX</li>
+            <li>JDBC</li>
+            <li>MySQL</li>
+            <li>JasperReports</li>
           </ul>
           <div class="proj-links">
             <a href="https://github.com/ZouheirFAKIR/delizia-restaurant" target="_blank" rel="noopener"
@@ -294,15 +358,21 @@
           <span class="proj-cat" data-key="cr_cat">Web Development · E-Commerce</span>
           <h3 class="proj-title">Cyber Royal</h3>
           <p class="proj-sub" data-key="cr_sub">Security &amp; Tech E-Commerce Website</p>
-          <p class="proj-desc" data-key="cr_desc">My very first web project — a dark-themed tech store with gold accents, interactive
+          <p class="proj-desc" data-key="cr_desc">My very first web project — a dark-themed tech store with gold
+            accents, interactive
             galleries and modal dialogs. Custom JavaScript drives the cart with localStorage and quantity controls,
             while a PHP backend handles sessions, cart persistence and message logging.</p>
           <ul class="proj-tags">
-            <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>PHP</li><li>MySQL</li><li>SweetAlert2</li>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>PHP</li>
+            <li>MySQL</li>
+            <li>SweetAlert2</li>
           </ul>
           <div class="proj-links">
-            <a href="https://github.com/ZouheirFAKIR/cyberroyal" target="_blank" rel="noopener"
-              class="proj-link" data-key="link_github4">GitHub →</a>
+            <a href="https://github.com/ZouheirFAKIR/cyberroyal" target="_blank" rel="noopener" class="proj-link"
+              data-key="link_github4">GitHub →</a>
           </div>
         </div>
       </article>
@@ -320,10 +390,14 @@
           <span class="proj-cat" data-key="crv_cat">Motion Graphics · Commercial</span>
           <h3 class="proj-title">Cyber Royal Promo</h3>
           <p class="proj-sub" data-key="crv_sub">Video Animation</p>
-          <p class="proj-desc" data-key="crv_desc">An animated promo built to match the Cyber Royal branding, featuring futuristic motion
+          <p class="proj-desc" data-key="crv_desc">An animated promo built to match the Cyber Royal branding, featuring
+            futuristic motion
             elements, product spotlights and full sound engineering.</p>
           <ul class="proj-tags">
-            <li>After Effects</li><li>Illustrator</li><li>Audition</li><li>Photoshop</li>
+            <li>After Effects</li>
+            <li>Illustrator</li>
+            <li>Audition</li>
+            <li>Photoshop</li>
           </ul>
         </div>
       </article>
@@ -351,15 +425,20 @@
           <span class="proj-cat" data-key="g_cat">Desktop Application</span>
           <h3 class="proj-title">Gourmet Gateway</h3>
           <p class="proj-sub" data-key="g_sub">Restaurant &amp; Reservation App</p>
-          <p class="proj-desc" data-key="g_desc">My first Python desktop app — a categorized ordering system with dish details, ratings
+          <p class="proj-desc" data-key="g_desc">My first Python desktop app — a categorized ordering system with dish
+            details, ratings
             and live totals, a table reservation flow with a calendar picker and party-size controls, and a multi-step
             checkout that validates card details. User accounts and auth persist in a local SQLite database.</p>
           <ul class="proj-tags">
-            <li>Python</li><li>Tkinter</li><li>CustomTkinter</li><li>SQLite</li><li>Pillow</li>
+            <li>Python</li>
+            <li>Tkinter</li>
+            <li>CustomTkinter</li>
+            <li>SQLite</li>
+            <li>Pillow</li>
           </ul>
           <div class="proj-links">
-            <a href="https://github.com/ZouheirFAKIR/GourmetGateway" target="_blank" rel="noopener"
-              class="proj-link" data-key="link_github5">GitHub →</a>
+            <a href="https://github.com/ZouheirFAKIR/GourmetGateway" target="_blank" rel="noopener" class="proj-link"
+              data-key="link_github5">GitHub →</a>
           </div>
         </div>
       </article>
@@ -381,13 +460,19 @@
         <h3 class="skill-name" data-key="skill_front">Frontend</h3>
         <p class="skill-text" data-key="skill_front_txt">Building responsive, animated interfaces.</p>
         <div class="icon-tiles">
-          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/html.png" alt="HTML" onerror="this.style.display='none'"><span>HTML</span></div>
-          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/css.png" alt="CSS" onerror="this.style.display='none'"><span>CSS</span></div>
-          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/js.png" alt="JavaScript" onerror="this.style.display='none'"><span>JavaScript</span></div>
-          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/react.png" alt="React" onerror="this.style.display='none'"><span>React</span></div>
-          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/vite.png" alt="Vite" onerror="this.style.display='none'"><span>Vite</span></div>
-          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/tailwind.png" alt="Tailwind" onerror="this.style.display='none'"><span>Tailwind</span></div>
-          
+          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/html.png" alt="HTML"
+              onerror="this.style.display='none'"><span>HTML</span></div>
+          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/css.png" alt="CSS"
+              onerror="this.style.display='none'"><span>CSS</span></div>
+          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/js.png" alt="JavaScript"
+              onerror="this.style.display='none'"><span>JavaScript</span></div>
+          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/react.png" alt="React"
+              onerror="this.style.display='none'"><span>React</span></div>
+          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/vite.png" alt="Vite"
+              onerror="this.style.display='none'"><span>Vite</span></div>
+          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/tailwind.png" alt="Tailwind"
+              onerror="this.style.display='none'"><span>Tailwind</span></div>
+
         </div>
       </div>
 
@@ -396,15 +481,23 @@
         <h3 class="skill-name" data-key="skill_back">Backend</h3>
         <p class="skill-text" data-key="skill_back_txt">APIs, databases and server-side logic.</p>
         <div class="icon-tiles">
-          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/node.png" alt="Node.js" onerror="this.style.display='none'"><span>Node.js</span></div>
-          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/express.png" alt="Express" onerror="this.style.display='none'"><span>Express</span></div>
-          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/php-seeklogo.png" alt="PHP" onerror="this.style.display='none'"><span>PHP</span></div>
-          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/laravel.png" alt="Laravel" onerror="this.style.display='none'"><span>Laravel</span></div>
-          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/java.png" alt="Java" onerror="this.style.display='none'"><span>Java</span></div>
-          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/python.png" alt="Python" onerror="this.style.display='none'"><span>Python</span></div>
-          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/postgresql.png" alt="PostgreSQL" onerror="this.style.display='none'"><span>PostgreSQL</span></div>
-          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/mysql.png" alt="MySQL" onerror="this.style.display='none'"><span>MySQL</span></div>
-         
+          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/node.png" alt="Node.js"
+              onerror="this.style.display='none'"><span>Node.js</span></div>
+          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/express.png" alt="Express"
+              onerror="this.style.display='none'"><span>Express</span></div>
+          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/php-seeklogo.png" alt="PHP"
+              onerror="this.style.display='none'"><span>PHP</span></div>
+          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/laravel.png" alt="Laravel"
+              onerror="this.style.display='none'"><span>Laravel</span></div>
+          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/java.png" alt="Java"
+              onerror="this.style.display='none'"><span>Java</span></div>
+          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/python.png" alt="Python"
+              onerror="this.style.display='none'"><span>Python</span></div>
+          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/postgresql.png" alt="PostgreSQL"
+              onerror="this.style.display='none'"><span>PostgreSQL</span></div>
+          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/mysql.png" alt="MySQL"
+              onerror="this.style.display='none'"><span>MySQL</span></div>
+
         </div>
       </div>
 
@@ -413,13 +506,20 @@
         <h3 class="skill-name" data-key="skill_design">Design, Motion &amp; 3D</h3>
         <p class="skill-text" data-key="skill_design_txt">Visual identity, motion design and 3D renders.</p>
         <div class="icon-tiles">
-          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/photoshop.png" alt="Photoshop" onerror="this.style.display='none'"><span>Photoshop</span></div>
-          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/illustrator.png" alt="Illustrator" onerror="this.style.display='none'"><span>Illustrator</span></div>
-          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/indesign.png" alt="InDesign" onerror="this.style.display='none'"><span>InDesign</span></div>
-          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/AE.png" alt="After Effects" onerror="this.style.display='none'"><span>After Effects</span></div>
-          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/audition.png" alt="Audition" onerror="this.style.display='none'"><span>Audition</span></div>
-          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/3dsmax.png" alt="3ds Max" onerror="this.style.display='none'"><span>3ds Max</span></div>
-          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/vray.png" alt="V-Ray" onerror="this.style.display='none'"><span>V-Ray</span></div>
+          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/photoshop.png" alt="Photoshop"
+              onerror="this.style.display='none'"><span>Photoshop</span></div>
+          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/illustrator.png" alt="Illustrator"
+              onerror="this.style.display='none'"><span>Illustrator</span></div>
+          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/indesign.png" alt="InDesign"
+              onerror="this.style.display='none'"><span>InDesign</span></div>
+          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/AE.png" alt="After Effects"
+              onerror="this.style.display='none'"><span>After Effects</span></div>
+          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/audition.png" alt="Audition"
+              onerror="this.style.display='none'"><span>Audition</span></div>
+          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/3dsmax.png" alt="3ds Max"
+              onerror="this.style.display='none'"><span>3ds Max</span></div>
+          <div class="icon-tile water"><img src="assets/images/LogicielsImgs/vray.png" alt="V-Ray"
+              onerror="this.style.display='none'"><span>V-Ray</span></div>
         </div>
       </div>
     </div>
@@ -427,19 +527,32 @@
     <div class="tools-block fade-up">
       <span class="tools-label" data-key="tools_label">Tools &amp; Software</span>
       <div class="icon-tiles tools">
-        <div class="icon-tile water"><img src="assets/images/LogicielsImgs/VsCode.png" alt="VS Code" onerror="this.style.display='none'"><span>VS Code</span></div>
-        <div class="icon-tile water"><img src="assets/images/LogicielsImgs/Git.png" alt="Git" onerror="this.style.display='none'"><span>Git</span></div>
-        <div class="icon-tile water"><img src="assets/images/LogicielsImgs/Github1.svg" alt="GitHub" onerror="this.style.display='none'"><span>GitHub</span></div>
-        <div class="icon-tile water"><img src="assets/images/LogicielsImgs/XAMPP.png" alt="XAMPP" onerror="this.style.display='none'"><span>XAMPP</span></div>
-        <div class="icon-tile water"><img src="assets/images/LogicielsImgs/vercel.png" alt="Vercel" onerror="this.style.display='none'"><span>Vercel</span></div>
-        <div class="icon-tile water"><img src="assets/images/LogicielsImgs/docker.png" alt="Docker" onerror="this.style.display='none'"><span>Docker</span></div>
-        <div class="icon-tile water"><img src="assets/images/LogicielsImgs/photoshop.png" alt="Photoshop" onerror="this.style.display='none'"><span>Photoshop</span></div>
-        <div class="icon-tile water"><img src="assets/images/LogicielsImgs/illustrator.png" alt="Illustrator" onerror="this.style.display='none'"><span>Illustrator</span></div>
-        <div class="icon-tile water"><img src="assets/images/LogicielsImgs/indesign.png" alt="InDesign" onerror="this.style.display='none'"><span>InDesign</span></div>
-        <div class="icon-tile water"><img src="assets/images/LogicielsImgs/AE.png" alt="After Effects" onerror="this.style.display='none'"><span>After Effects</span></div>
-        <div class="icon-tile water"><img src="assets/images/LogicielsImgs/audition.png" alt="Audition" onerror="this.style.display='none'"><span>Audition</span></div>
-        <div class="icon-tile water"><img src="assets/images/LogicielsImgs/3dsmax.png" alt="3ds Max" onerror="this.style.display='none'"><span>3ds Max</span></div>
-        <div class="icon-tile water"><img src="assets/images/LogicielsImgs/vray.png" alt="V-Ray" onerror="this.style.display='none'"><span>V-Ray</span></div>
+        <div class="icon-tile water"><img src="assets/images/LogicielsImgs/VsCode.png" alt="VS Code"
+            onerror="this.style.display='none'"><span>VS Code</span></div>
+        <div class="icon-tile water"><img src="assets/images/LogicielsImgs/Git.png" alt="Git"
+            onerror="this.style.display='none'"><span>Git</span></div>
+        <div class="icon-tile water"><img src="assets/images/LogicielsImgs/Github1.svg" alt="GitHub"
+            onerror="this.style.display='none'"><span>GitHub</span></div>
+        <div class="icon-tile water"><img src="assets/images/LogicielsImgs/XAMPP.png" alt="XAMPP"
+            onerror="this.style.display='none'"><span>XAMPP</span></div>
+        <div class="icon-tile water"><img src="assets/images/LogicielsImgs/vercel.png" alt="Vercel"
+            onerror="this.style.display='none'"><span>Vercel</span></div>
+        <div class="icon-tile water"><img src="assets/images/LogicielsImgs/docker.png" alt="Docker"
+            onerror="this.style.display='none'"><span>Docker</span></div>
+        <div class="icon-tile water"><img src="assets/images/LogicielsImgs/photoshop.png" alt="Photoshop"
+            onerror="this.style.display='none'"><span>Photoshop</span></div>
+        <div class="icon-tile water"><img src="assets/images/LogicielsImgs/illustrator.png" alt="Illustrator"
+            onerror="this.style.display='none'"><span>Illustrator</span></div>
+        <div class="icon-tile water"><img src="assets/images/LogicielsImgs/indesign.png" alt="InDesign"
+            onerror="this.style.display='none'"><span>InDesign</span></div>
+        <div class="icon-tile water"><img src="assets/images/LogicielsImgs/AE.png" alt="After Effects"
+            onerror="this.style.display='none'"><span>After Effects</span></div>
+        <div class="icon-tile water"><img src="assets/images/LogicielsImgs/audition.png" alt="Audition"
+            onerror="this.style.display='none'"><span>Audition</span></div>
+        <div class="icon-tile water"><img src="assets/images/LogicielsImgs/3dsmax.png" alt="3ds Max"
+            onerror="this.style.display='none'"><span>3ds Max</span></div>
+        <div class="icon-tile water"><img src="assets/images/LogicielsImgs/vray.png" alt="V-Ray"
+            onerror="this.style.display='none'"><span>V-Ray</span></div>
       </div>
     </div>
   </section>
@@ -455,7 +568,8 @@
     <div class="contact-wrap">
       <div class="contact-info fade-up">
         <h3 class="contact-big" data-key="contact_big">Let's build<br>something together.</h3>
-        <p class="contact-sub" data-key="contact_sub">Open to internship opportunities and freelance work. Feel free to reach out.</p>
+        <p class="contact-sub" data-key="contact_sub">Open to internship opportunities and freelance work. Feel free to
+          reach out.</p>
         <div class="contact-links">
           <a href="mailto:fakirzouheir@gmail.com" class="contact-line">
             <span class="cl-label" data-key="cl_email">Email</span>
@@ -476,8 +590,7 @@
         </div>
       </div>
 
-      <form class="contact-form fade-up" id="contactForm"
-            action="https://formspree.io/f/meeylrgj" method="POST">
+      <form class="contact-form fade-up" id="contactForm" action="https://formspree.io/f/meeylrgj" method="POST">
         <div class="field">
           <input type="text" id="cName" name="name" required>
           <label for="cName" data-key="form_name">Your Name</label>
