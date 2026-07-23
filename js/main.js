@@ -437,7 +437,8 @@ if (contactForm) {
     exp_title: ["My <em>Experience</em>", "Mon <em>Expérience</em>"],
     exp_dur: ["2 Months", "2 Mois"],
     exp_role: ["Web Developer Intern", "Stagiaire Développeur Web"],
-    exp_desc: ["Internship in web development. Worked on building and improving web interfaces, collaborating with the development team on real projects.", "Stage en développement web. J'ai travaillé sur la création et l'amélioration d'interfaces web, en collaborant avec l'équipe de développement sur des projets réels."],
+    exp_desc: ["Internship in web development at WEBEX AG. Designed and built an e-commerce website — integrated the interfaces with HTML, CSS and JavaScript, developed the back-end with PHP and Laravel, and handled the database management.", 
+      "Stage en développement web chez WEBEX AG. Conception et développement d'un site e-commerce — intégration des interfaces avec HTML, CSS et JavaScript, développement back-end avec PHP et Laravel, et gestion de la base de données."],
 
     proj_title: ["My <em>Projects</em>", "Mes <em>Projets</em>"],
 
